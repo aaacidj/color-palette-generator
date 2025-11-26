@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUOTE GENERATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="quote-box">
+            <header>
+                <h1>Генератор мудрых цитат</h1>
+                <p>Найдите вдохновение для нового дня</p>
+            </header>
+
+            <div class="quote-display">
+                <div id="quoteText" class="quote-text">
+                    Нажмите кнопку ниже для первой цитаты
+                </div>
+                <div id="quoteAuthor" class="quote-author"></div>
+            </div>
+
+            <div class="controls">
+                <button id="newQuoteBtn" class="btn-primary">
+                    Новая цитата
+                </button>
+                <button id="copyQuoteBtn" class="btn-secondary">
+                    📋 Копировать цитату
+                </button>
+                <button id="addToFavoritesBtn" class="btn-secondary">
+                    ⭐ В избранное
+                </button>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <label for="categorySelect">Категория:</label>
+                    <select id="categorySelect">
+                        <option value="all">Все цитаты</option>
+                        <option value="motivation">Мотивация</option>
+                        <option value="life">Жизнь</option>
+                        <option value="success">Успех</option>
+                        <option value="wisdom">Мудрость</option>
+                        <option value="funny">Юмор</option>
+                    </select>
+                </div>
+                <div class="feature">
+                    <label>
+                        <input type="checkbox" id="autoChange">
+                        Автосмена каждые 10 секунд
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="favorites-section">
+            <h2> Избранные цитаты</h2>
+            <div id="favoritesContainer" class="favorites-container">
+                <!-- Избранные цитаты будут здесь -->
+            </div>
+        </div>
+
+        <div class="quote-counter">
+            <span id="quoteCount">0</span> цитат показано сегодня
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
